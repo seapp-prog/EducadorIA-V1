@@ -26,13 +26,13 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-slate-50 text-slate-900 pb-20">
       
       {/* Navbar */}
-      <nav className="sticky top-0 z-30 bg-white/90 backdrop-blur-md border-b-4 border-yellow-400 shadow-sm">
+      <nav className="sticky top-0 z-30 bg-blue-900 text-white border-b-4 border-green-500 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2 text-blue-800">
+          <div className="flex items-center gap-2 text-white">
             <div className="p-2 bg-green-600 text-white rounded-lg shadow-sm">
               <GraduationCap size={24} />
             </div>
-            <span className="text-xl font-bold tracking-tight">Educador<span className="text-yellow-500">IA</span></span>
+            <span className="text-xl font-bold tracking-tight">Educador<span className="text-green-400">IA</span></span>
           </div>
 
           <div className="flex items-center gap-4">
@@ -41,7 +41,7 @@ const App: React.FC = () => {
               <button 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 onBlur={() => setTimeout(() => setIsMenuOpen(false), 200)}
-                className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-600 hover:text-green-600 hover:bg-green-50 rounded-lg transition-colors"
+                className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-blue-100 hover:text-white hover:bg-blue-800 rounded-lg transition-colors"
               >
                 <Library size={18} />
                 <span className="hidden sm:inline">Base de Consulta</span>
@@ -50,7 +50,7 @@ const App: React.FC = () => {
 
               {/* Dropdown */}
               {isMenuOpen && (
-                <div className="absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-100 overflow-hidden animate-in fade-in slide-in-from-top-2">
+                <div className="absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-100 overflow-hidden animate-in fade-in slide-in-from-top-2 text-slate-900">
                   <div className="p-2 bg-slate-50 border-b border-slate-100">
                      <span className="text-xs font-semibold text-slate-500 uppercase px-2">Acervo Digital SME</span>
                   </div>
@@ -73,8 +73,10 @@ const App: React.FC = () => {
               )}
             </div>
 
-            <div className="hidden md:flex items-center text-sm font-medium text-slate-500 border-l border-slate-200 pl-4">
-              Prefeitura Municipal de Itapecerica da Serra
+            <div className="hidden md:flex items-center text-sm font-medium text-blue-100 border-l border-blue-700 pl-4">
+              <span className="leading-tight text-right">
+                Prefeitura Municipal de<br/>Itapecerica da Serra
+              </span>
             </div>
           </div>
         </div>
@@ -83,9 +85,10 @@ const App: React.FC = () => {
       {/* Hero Section */}
       <div className="bg-white border-b border-slate-200 mb-8">
         <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-50 text-yellow-700 border border-yellow-100 text-xs font-bold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-100 text-xs font-bold uppercase tracking-wider mb-6">
             <Sparkles size={14} /> Potencialize suas aulas
           </div>
+          
           <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
             Seu Assistente Pedagógico <br className="hidden sm:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-green-500">
@@ -157,9 +160,9 @@ const App: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="mt-20 py-8 border-t-4 border-green-500 bg-white">
+      <footer className="mt-20 py-8 border-t-4 border-green-500 bg-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-blue-200">
             © {new Date().getFullYear()} Educador IA - Prefeitura Municipal de Itapecerica da Serra.
           </p>
         </div>
